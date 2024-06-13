@@ -52,7 +52,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Jia Jin',
             'email' => 'lewjjn@gmail.com',
             'password' => bcrypt('12345678'),
-            'phone_no' => '0176717767',
+            'phone_no' => '1233345',
             'role_id' => 3,
         ]);
 
@@ -159,7 +159,6 @@ class DatabaseSeeder extends Seeder
                 foreach ($seat_rows as $seat_row) {
                     foreach ($seat_columns as $seat_column) {
                         Seats::create([
-                            'isTaken' => false,
                             'train_id' => $train, 'coach' => $coach,
                             'seat' => $seat_row . $seat_column,
                         ]);
