@@ -103,7 +103,6 @@ class SearchController extends Controller
 
             $result[$key]['seats'] = count(DB::table('seats')
                 ->where('train_id', $result[$key]['id'])
-                ->where('isTaken', false)
                 ->get()) - count($result[$key]['booked_seats']);
 
             $result[$key]['position'] = $result_index;
@@ -144,7 +143,6 @@ class SearchController extends Controller
 
             $result2[$key]['seats'] = count(DB::table('seats')
                 ->where('train_id', $result2[$key]['id'])
-                ->where('isTaken', false)
                 ->get()) - count($result2[$key]['booked_seats']);
 
             $result2[$key]['position'] = $result2_index;
